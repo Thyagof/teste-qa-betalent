@@ -85,39 +85,39 @@ Os casos de teste deste projeto serão escritos utilizando a linguagem Gherkin, 
     
     CT11: Validação da exibição dos produtos
         Given que o usuário tenha feito login com sucesso
-        When o usuário estiver na página principal https://www.saucedemo.com/inventory.html
+        When o usuário estiver na página principal "https://www.saucedemo.com/inventory.html"
         Then a lista de produtos deve ser exibida respeitando a ordem alfabética por nome
         And cada produto deve mostrar nome, texto, preço, imagem e ter um botão com texto "Add to cart"
 
     CT12: Validação do filtro "Name (A to Z)"
-        Given que o usuário esteja na página principal https://www.saucedemo.com/inventory.html
+        Given que o usuário esteja na página principal "https://www.saucedemo.com/inventory.html"
         When o usuário selecionar no filtro "Name (Z to A)"
         And o usuário selecionar no filtro "Name (A to Z)"
         Then a lista de produtos deve ser exibida respeitando a ordem alfabética por nome
 
     CT13: Validação do filtro "Name (Z to A)"
-        Given que o usuário esteja na página https://www.saucedemo.com/inventory.html
+        Given que o usuário esteja na página "https://www.saucedemo.com/inventory.html"
         When o usuário selecionar no filtro "Name (Z to A)"
         Then a lista de produtos deve ser exibida respeitando a ordem alfabética inversa por nome
 
     CT14: Validação do filtro "Price (low to high)"
-        Given que o usuário esteja na página https://www.saucedemo.com/inventory.html
+        Given que o usuário esteja na página "https://www.saucedemo.com/inventory.html"
         When o usuário selecionar no filtro "Price (low to high)"
         Then a lista de produtos deve ser exibida respeitando a ordem crescente de preço
 
     CT15: Validação do filtro "Price (high to low)"
-        Given que o usuário esteja na página https://www.saucedemo.com/inventory.html
+        Given que o usuário esteja na página "https://www.saucedemo.com/inventory.html"
         When o usuário selecionar no filtro "Price (high to low)"
         Then a lista de produtos deve ser exibida respeitando a ordem decrescente de preço
 
     CT16: Validação do redirecionamento da página pelo Botão "Products" no menu hambúrguer
-        Given que o usuário esteja na página https://www.saucedemo.com/cart.html
+        Given que o usuário esteja na página "https://www.saucedemo.com/cart.html"
         When o usuário clicar no menu hamburguer
         And o usuário clicar no botão Products
-        Then o usuário deve ser redirecionado para a página https://www.saucedemo.com/inventory.html
+        Then o usuário deve ser redirecionado para a página "https://www.saucedemo.com/inventory.html"
 
     CT17: Validação da página de item
-        Given que o usuário esteja na página https://www.saucedemo.com/inventory.html
+        Given que o usuário esteja na página "https://www.saucedemo.com/inventory.html"
         When o usuário clicar no nome do primeiro item da página
         Then o usuário deve ser redirecionado para a página
         And o sistema deve mostrar nome do item, texto do item, preço do item, imagem do item e ter um botão com texto "Add to cart"
@@ -126,12 +126,12 @@ Os casos de teste deste projeto serão escritos utilizando a linguagem Gherkin, 
     Feature: Carrinho
 
     CT18: Redirecionamento da página pelo botão do carrinho
-        Given que o usuário esteja na página https://www.saucedemo.com/inventory.html
+        Given que o usuário esteja na página "https://www.saucedemo.com/inventory.html"
         When o usuário clicar no botão com ícone do carrinho
-        Then o usuário deve ser redirecionado para a página https://www.saucedemo.com/cart.html
+        Then o usuário deve ser redirecionado para a página "https://www.saucedemo.com/cart.html"
 
     CT19: Atualização do ícone do carrinho ao adicionar item ao carrinho
-        Given que o usuário esteja na página https://www.saucedemo.com/inventory.html
+        Given que o usuário esteja na página "https://www.saucedemo.com/inventory.html"
         When o usuário clicar no botão "Add to cart" do primeiro item da lista
         Then o ícone do carrinho deve mudar passando a exibir uma bolinha vermelha com o número 1
 
@@ -141,16 +141,16 @@ Os casos de teste deste projeto serão escritos utilizando a linguagem Gherkin, 
         Then o ícone do carrinho deve mudar, passando a exibir apenas o carrinho
 
     CT21: Atualização do ícone do carrinho ao adicionar múltiplos itens ao carrinho
-        Given que o usuário esteja na página https://www.saucedemo.com/inventory.html
+        Given que o usuário esteja na página "https://www.saucedemo.com/inventory.html"
         When o usuário clicar no botão "Add to cart" do primeiro item da lista
         And o usuário clicar no botão "Add to cart" do último item da lista
         Then o ícone do carrinho deve mudar passando a exibir uma bolinha vermelha com o número 2
 
     CT22: Exibição de item no carrinho
-        Given que o usuário esteja na página https://www.saucedemo.com/inventory.html
+        Given que o usuário esteja na página "https://www.saucedemo.com/inventory.html"
         When o usuário clicar no botão "Add to cart" do primeiro item da lista
         And o usuário clicar no ícone do carrinho
-        Then o sistema deve redirecionar para a página https://www.saucedemo.com/cart.html
+        Then o sistema deve redirecionar para a página "https://www.saucedemo.com/cart.html"
         And o sistema deve exibir o item que foi adicionado ao carrinho, com nome, texto, preço e quantidade e imagem
 
     CT23: Remoção de item do carrinho
@@ -166,9 +166,9 @@ Os casos de teste deste projeto serão escritos utilizando a linguagem Gherkin, 
         Then os itens devem ser devidamente removidos do carrinho
         
     CT25: Redirecionamento do botão "Continue Shopping"
-        Given que o usuário esteja na página https://www.saucedemo.com/cart.html
+        Given que o usuário esteja na página "https://www.saucedemo.com/cart.html"
         When o usuário clicar no botão "Continue Shopping"
-        Then deve ser redirecionado para a página https://www.saucedemo.com/inventory.html
+        Then deve ser redirecionado para a página "https://www.saucedemo.com/inventory.html"
 
 ---
 
@@ -180,7 +180,7 @@ Os casos de teste deste projeto serão escritos utilizando a linguagem Gherkin, 
         Then deve ser redirecionado para a página "https://www.saucedemo.com/checkout-step-one.html"
 
     CT27: Validação do botão de Checkout desabilitado sem produtos no carrinho
-        Given que o usuário esteja na página https://www.saucedemo.com/cart.html
+        Given que o usuário esteja na página "https://www.saucedemo.com/cart.html"
         When o usuário não tiver produtos no carrinho
         Then o botão de checkout deve estar desabilitado
 
@@ -399,12 +399,13 @@ Os casos de teste deste projeto serão escritos utilizando a linguagem Gherkin, 
 ## 4. Sugestões de Melhoria UX/UI
 - Se faz necessário a criação de uma seção do site para o usuário ver as informações do seu perfil, alterar senha - Isso vai além de UX, seria uma feature completa, mas supondo que o usuário criou uma conta com senha errada, ele poderia alterar a senha. O usuário não pode ficar preso no próprio erro, o sistema tem que dar meios dele mesmo corrigir isso;
 - Mudar cor ao dar hover nos botões do sistema, para dar feedback visual para o usuário;
-- Criar botões para aumentar/diminuir a quantidade dos itens do carrinho, senão não faria sentido ter a quantidade dos itens em cada produto. Caso seja um regra de negócio ser possível adicionar apenas um item de cada produto, aí seria caso de remover a seção de quantidade dos itens dos carrinhos, dado que isso pode causar confusão ao usuário;
-- Criar consistência ao nomear as páginas do site - Ex: Página Products (https://www.saucedemo.com/inventory.html), no url se chama "inventory", no menu hambúrguer se chama "All Items";
+- Criar botões para aumentar/diminuir a quantidade dos itens do carrinho, senão não faria sentido ter a quantidade dos itens em cada produto. Caso seja um regra de negócio deveria ser possível adicionar apenas um item de cada produto, aí seria caso de remover a seção de quantidade dos itens dos carrinhos, dado que isso pode causar confusão ao usuário;
+- É necessário consistência ao nomear as páginas do site - Ex: Página Products (https://www.saucedemo.com/inventory.html), no url se chama "inventory", no menu hambúrguer se chama "All Items";
 - Redirecionar o usuário para a página principal do site (https://www.saucedemo.com/inventory.html) ao clicar no logo "Swag Labs";
 - Remover o menu hambúrguer do site em tamanhos maiores, dado que tem espaço para isso e isso economizaria cliques para o usuário;
 - Deixar mais evidente qual o título da página em que o usuário estám para dar feedback visual ao usuário;
-- Criar breadcrumbs para mostrar os passos do checkout - É necessária ter visibilidade do status do sistema;
+- Criar breadcrumbs para mostrar os passos do Checkout - É necessária ter visibilidade do status do sistema;
+- Na primeira página do Checkout "https://www.saucedemo.com/checkout-step-one.html" , no desktop, o botão "Continue" fica muito distante do formulário, dependendo do tamanho da tela, obrigando o usuário até mesmo a dar scroll para continuar no Checkout.
 
 ---
 
