@@ -1,5 +1,23 @@
 # Plano de Testes - UI Testing ([Sauce Demo](https://www.saucedemo.com/))
 
+### Sumário
+- [Plano de Testes - UI Testing (Sauce Demo)](#plano-de-testes---ui-testing-sauce-demo)
+  - [1. Objetivo](#1-objetivo)
+  - [2. Plano de Testes](#2-plano-de-testes)
+    - [2.1 Estratégia de Teste](#21-estratégia-de-teste)
+    - [2.2 Cenários de Teste](#22-cenários-de-teste)
+  - [3. Resultados dos Testes](#3-resultados-dos-testes)
+  - [4. Sugestões de Melhoria UX/UI](#4-sugestões-de-melhoria-uxui)
+  - [5. Lista de Bugs](#5-lista-de-bugs)
+  - [6. Análise de Riscos](#6-análise-de-riscos)
+    - [6.1 Riscos Identificados](#61-riscos-identificados)
+    - [6.2 Plano de Ação](#62-plano-de-ação)
+  - [7. Sugestões de Automação](#7-sugestões-de-automação)
+    - [7.1 Ferramentas e Frameworks Recomendados](#71-ferramentas-e-frameworks-recomendados)
+    - [7.2 Fluxos Prioritários para Automação](#72-fluxos-prioritários-para-automação)
+    - [7.3 Benefícios da Automação](#73-benefícios-da-automação)
+    - [7.4 Plano de Implementação](#74-plano-de-implementação)
+
 ## 1. Objetivo
 Realizar a validação completa da plataforma Sauce Demo, cobrindo os principais fluxos da aplicação antes do lançamento em produção.
 
@@ -456,9 +474,9 @@ Os casos de teste deste projeto serão escritos utilizando a linguagem Gherkin, 
 
 ---
 
-## **6. Análise de Riscos**
+## 6. Análise de Riscos
 
-### **6.1 Riscos Identificados**
+### 6.1 Riscos Identificados
 
 1. **Inconsistências de Design (UX/UI)**
    - **Descrição**: Problemas na interface do usuário (ex: falta de breadcrumbs, inconsistência de nomenclatura) podem impactar a experiência do usuário.
@@ -496,7 +514,7 @@ Os casos de teste deste projeto serão escritos utilizando a linguagem Gherkin, 
 
 ---
 
-### **6.2 Plano de Ação**
+### 6.2 Plano de Ação
 - **Avaliação contínua**: Monitorar os riscos durante todo o ciclo de testes, revisitando as estratégias de mitigação conforme necessário.
 - **Automação de testes**: Implementar automação para cobrir regressões frequentes em áreas críticas, garantindo consistência.
 - **Comunicação com stakeholders**: Manter todas as partes interessadas informadas sobre os principais riscos e as ações tomadas para mitigá-los.
