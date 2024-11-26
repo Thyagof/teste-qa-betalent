@@ -2,14 +2,14 @@
 
 Você terá de executar e documentar dois tipos de testes:
 
-1. [**UI Testing**](/ui-testing.md)
-2. [**API Testing**](/api-testing.md)
+1. [**UI Testing**](/ui-testing)
+2. [**API Testing**](/api-testing)
 
 Os requisitos a serem atendidos estão detalhados abaixo.
 
 ---
 
-## 1. [UI Testing](/ui-testing.md)
+## 1. [UI Testing](/ui-testing)
 
 ### Descrição
 A tarefa consiste em testar a plataforma de e-commerce **[Sauce Demo](https://www.saucedemo.com)**. O objetivo é realizar uma validação completa da aplicação antes de sua liberação em produção.
@@ -53,7 +53,7 @@ A tarefa consiste em testar a plataforma de e-commerce **[Sauce Demo](https://ww
 
 ---
 
-## 2. [API Testing](/api-testing.md)
+## 2. [API Testing](/api-testing)
 
 ### Descrição
 A tarefa consiste em testar a API do **[Restful-Booker](https://restful-booker.herokuapp.com)**, um sistema de reservas de hotel. O objetivo é validar a API antes de sua integração com o front-end.
