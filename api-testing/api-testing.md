@@ -1,65 +1,100 @@
 # API Testing - [Restful-Booker](https://restful-booker.herokuapp.com/)
 
-## Lista de Cenários Testados
+### Sumário
+  - [1. Objetivos](#1-objetivos)
+      - [1.1 Propósito](#11-proposito)
+      - [1.2 Escopo](#12-escopo)
+      - [1.3 Resultados Esperados](#13-resultados-esperados)
+  - [2. Lista de Cenários Testados](#2-lista-de-cenários-testados)
+    - [2.1 Autenticação](#21-autenticação)
+    - [2.2 Criar Reservas](#22-criar-reservas)
+    - [2.3 Filtros e Buscas](#23-filtros-e-buscas)
+    - [2.4 Atualizar Reservas](#24-atualizar-reservas)
+    - [2.5 Deletar Reservas](#25-deletar-reservas)
+  - [3. Resultados Obtidos](#3-resultados-obtidos)
+    - [3.1 Autenticação](#31-autenticação)
+    - [3.2 Criar Reservas](#32-criar-reservas)
+    - [3.3 Filtros e Buscas](#33-filtros-e-buscas)
+    - [3.4 Atualizar Reservas](#34-atualizar-reservas)
+    - [3.5 Deletar Reservas](#35-deletar-reservas)
+  - [4. Bugs Encontrados](#4-bugs-encontrados)
 
-### Autenticação
-CT1: Gerar token de autenticação
-CT2: Tentar gerar token de autenticação sem body
-CT3: Tentar gerar token de autenticação sem username
-CT4: Tentar gerar token de autenticação sem password
-CT5: Tentar gerar token com credenciais inválidas
 
-### Criar Reservas
-CT6: Criar uma nova reserva
-CT7: Criar reserva com firstname de tipo errado
-CT8: Criar reserva com lastname de tipo errado
-CT9: Criar reserva com totalprice de tipo errado
-CT10: Criar reserva com depositpaid de tipo errado
-CT11: Criar reserva com additionalneeds de tipo errado
-CT12: Criar reserva com checkin de tipo errado
-CT13: Criar reserva com checkout de tipo errado
-CT14: Criar reserva com checkout com formato de data diferente
-CT15: Criar reserva com checkin com formato de data diferente
-CT16: Criar reserva com checkin maior que o checkout
-CT17: Criar reserva sem totalprice
-CT18: Criar reserva sem additionalneeds
-CT19: Criar reserva sem checkin
-CT20: Criar reserva sem depositpaid
-CT21: Criar reserva sem checkout
-CT22: Criar reserva sem lastname
-CT23: Criar reserva sem firstname
+## 1. Objetivos
 
-### Filtros e Buscas
-CT24: Listar todas as reservas
-CT25: Buscar reservas por first e last name
-CT26: Buscar reservas com names de valores inválidos
-CT27: Buscar reservas com parâmetro inválido
-CT28: Buscar reservas por last name
-CT29: Buscar reservas por first name
-CT30: Buscar reservas por data de check-in/check-out
-CT31: Buscar reservas por datas inválidas
-CT32: Buscar reservas por data de check-out
-CT33: Buscar reservas por data de check-in
-CT34: Buscar uma reserva específica
-CT35: Buscar uma reserva com id inexistente
-CT36: Buscar uma reserva com id inválido
+### 1.1 Propósito
+O objetivo deste projeto é validar os endpoints da API **Restful-Booker** antes de sua integração com o front-end. A validação cobre funcionalidades críticas, como autenticação, gestão de reservas e filtros de busca, para assegurar a confiabilidade e a conformidade com as expectativas do sistema.
 
-### Atualizar Reservas
-CT37: Atualizar reserva existente
-CT38: Atualizar reserva sem firstname
-CT39: Atualizar reserva sem lastname
-CT40: Atualizar reserva com depositpaid de tipo errado
-CT41: Atualizar reserva com additionalneeds tipo errado
-CT42: Atualizar reserva com checkin depois do checkout
+### 1.2 Escopo
+- Garantir que os endpoints da API retornem os resultados esperados para cenários válidos e inválidos.
+- Identificar inconsistências no tratamento de erros, validações de campos obrigatórios, formatos de datas e códigos de resposta HTTP.
+- Documentar os cenários testados, resultados obtidos e quaisquer bugs encontrados.
 
-### Deletar Reservas
-CT43: Deletar uma reserva
-CT44: Deletar uma reserva com valor inválido
-CT45: Deletar uma reserva com valor inexistente
+### 1.3 Resultados Esperados
+- **Validação funcional**: Os endpoints devem funcionar conforme especificado, retornando os códigos e respostas apropriadas.
+- **Tratamento adequado de erros**: A API deve retornar mensagens claras e relevantes em cenários inválidos.
+- **Prontidão para integração**: A API deve atender aos critérios de qualidade definidos para seguir para a fase de integração com o front-end.
 
-## Resultados Obtidos
+## 2. Lista de Cenários Testados
 
-### Autenticação
+### 2.1 Autenticação
+- CT1: Gerar token de autenticação
+- CT2: Tentar gerar token de autenticação sem body
+- CT3: Tentar gerar token de autenticação sem username
+- CT4: Tentar gerar token de autenticação sem password
+- CT5: Tentar gerar token com credenciais inválida
+
+### 2.2 Criar Reservas
+- CT6: Criar uma nova reserva
+- CT7: Criar reserva com firstname de tipo errado
+- CT8: Criar reserva com lastname de tipo errado
+- CT9: Criar reserva com totalprice de tipo errado
+- CT10: Criar reserva com depositpaid de tipo errado
+- CT11: Criar reserva com additionalneeds de tipo errado
+- CT12: Criar reserva com checkin de tipo errado
+- CT13: Criar reserva com checkout de tipo errado
+- CT14: Criar reserva com checkout com formato de data diferente
+- CT15: Criar reserva com checkin com formato de data diferente
+- CT16: Criar reserva com checkin maior que o checkout
+- CT17: Criar reserva sem totalprice
+- CT18: Criar reserva sem additionalneeds
+- CT19: Criar reserva sem checkin
+- CT20: Criar reserva sem depositpaid
+- CT21: Criar reserva sem checkout
+- CT22: Criar reserva sem lastname
+- CT23: Criar reserva sem firstname
+
+### 2.3 Filtros e Buscas
+- CT24: Listar todas as reservas
+- CT25: Buscar reservas por first e last name
+- CT26: Buscar reservas com names de valores inválidos
+- CT27: Buscar reservas com parâmetro inválido
+- CT28: Buscar reservas por last name
+- CT29: Buscar reservas por first name
+- CT30: Buscar reservas por data de check-in/check-out
+- CT31: Buscar reservas por datas inválidas
+- CT32: Buscar reservas por data de check-out
+- CT33: Buscar reservas por data de check-in
+- CT34: Buscar uma reserva específica
+- CT35: Buscar uma reserva com id inexistente
+- CT36: Buscar uma reserva com id inválido
+
+### 2.4 Atualizar Reservas
+- CT37: Atualizar reserva existente
+- CT38: Atualizar reserva sem firstname
+- CT39: Atualizar reserva sem lastname
+- CT40: Atualizar reserva com depositpaid de tipo errado
+- CT41: Atualizar reserva com additionalneeds tipo errado
+- CT42: Atualizar reserva com checkin depois do checkout
+
+### 2.5 Deletar Reservas
+- CT43: Deletar uma reserva
+- CT44: Deletar uma reserva com valor inválido
+- CT45: Deletar uma reserva com valor inexistente
+
+## 3. Resultados Obtidos
+
+### 3.1 Autenticação
 **CT1: Gerar token de autenticação**
 - Status: 200 OK
 - Testes:
@@ -90,7 +125,8 @@ CT45: Deletar uma reserva com valor inexistente
 - Testes:
   - `Status code é 400`: <font color="red">Falhou</font>
   - `Response contém 'Bad credentials'`: <font color="green">Passou</font>
-### Gestão de Reservas
+
+### 3.2 Criar Reservas
 **CT6: Criar uma nova reserva**
 - Status: 200 OK
 - Testes:
@@ -200,7 +236,7 @@ CT45: Deletar uma reserva com valor inexistente
   - `Status code é 400`: <font color="red">Falhou</font>
   - `Response contém 'firstname is required'`: <font color="red">Falhou</font>
 
-### Filtros e Buscas
+### 3.3 Filtros e Buscas
 **CT24: Listar todas as reservas**
 - Status: 200 OK
 - Testes:
@@ -285,7 +321,7 @@ CT45: Deletar uma reserva com valor inexistente
   - `Status code é 404`: <font color="green">Passou</font>
   - `Response contém uma mensagem apropriada de erro`: <font color="green">Passou</font>
 
-### Atualizar Reservas
+### 3.4 Atualizar Reservas
 **CT37: Atualizar reserva existente**
 - Status: 200 OK
 - Testes:
@@ -322,7 +358,7 @@ CT45: Deletar uma reserva com valor inexistente
   - `Status code é 400`: <font color="red">Falhou</font>
   - `Response contém mensagem de erro adequada`: <font color="red">Falhou</font>
 
-### Deletar Reservas
+### 3.5 Deletar Reservas
 **CT43: Deletar uma reserva**
 - Status: 201 Created
 - Testes:
@@ -341,7 +377,7 @@ CT45: Deletar uma reserva com valor inexistente
   - `Status code é 404`: <font color="red">Falhou</font>
   - `Response contém mensagem de erro para ID não encontrado`: <font color="red">Falhou</font>
 
-## Bugs Encontrados
+## 4. Bugs Encontrados
 
 1. **CT2: Tentar gerar token de autenticação sem body**
    - **URL**: `https://restful-booker.herokuapp.com/auth`
@@ -543,8 +579,7 @@ CT45: Deletar uma reserva com valor inexistente
            "additionalneeds": "Breakfast"
          }
        }
-       ```
-## Bugs Encontrados
+       ``` 
 
 10. **CT11: Criar reserva com additionalneeds de tipo errado**
     - **URL**: `https://restful-booker.herokuapp.com/booking`
@@ -970,8 +1005,6 @@ CT45: Deletar uma reserva com valor inexistente
     - **Retornado**: 
       - **Status Code**: 400 Bad Request
       - **Corpo da Resposta**: { "message": "Bad Request" }
-
-## Bugs Encontrados
 
 26. **CT40: Atualizar reserva com depositpaid de tipo errado**
     - **URL**: `https://restful-booker.herokuapp.com/booking/1`
