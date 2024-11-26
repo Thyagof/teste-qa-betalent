@@ -1,0 +1,1735 @@
+{
+	"id": "64bebc67-333d-403e-9f2e-dd130e64fb96",
+	"name": "Restful-booker",
+	"timestamp": "2024-11-26T04:10:44.859Z",
+	"collection_id": "2814048-efc80416-53a4-49ed-b666-6a1ffbec9250",
+	"folder_id": 0,
+	"environment_id": "0",
+	"totalPass": 43,
+	"delay": 0,
+	"persist": true,
+	"status": "finished",
+	"startedAt": "2024-11-26T04:10:22.290Z",
+	"totalFail": 55,
+	"results": [
+		{
+			"id": "06d8dc38-4adc-4d77-ae39-93a8ce05c879",
+			"name": "Gerar token de autenticação",
+			"url": "https://restful-booker.herokuapp.com/auth",
+			"time": 172,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code é 200": true,
+				"Token é gerado": true,
+				"Token não é vazio": true
+			},
+			"testPassFailCounts": {
+				"Status code é 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Token é gerado": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Token não é vazio": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				172
+			],
+			"allTests": [
+				{
+					"Status code é 200": true,
+					"Token é gerado": true,
+					"Token não é vazio": true
+				}
+			]
+		},
+		{
+			"id": "f900ce6c-a0a2-464b-971d-221c9bcb6571",
+			"name": "Tentar gerar token de autenticação sem body",
+			"url": "https://restful-booker.herokuapp.com/auth",
+			"time": 181,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code é 400": false,
+				"Response contém 'Bad credencials'": true
+			},
+			"testPassFailCounts": {
+				"Status code é 400": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Response contém 'Bad credencials'": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				181
+			],
+			"allTests": [
+				{
+					"Status code é 400": false,
+					"Response contém 'Bad credencials'": true
+				}
+			]
+		},
+		{
+			"id": "9eeaa42c-3d6c-42d2-ae97-bb05c9f64a6c",
+			"name": "Tentar gerar token de autenticação sem username",
+			"url": "https://restful-booker.herokuapp.com/auth",
+			"time": 158,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code é 400": false,
+				"Response contém 'Bad credencials'": true
+			},
+			"testPassFailCounts": {
+				"Status code é 400": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Response contém 'Bad credencials'": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				158
+			],
+			"allTests": [
+				{
+					"Status code é 400": false,
+					"Response contém 'Bad credencials'": true
+				}
+			]
+		},
+		{
+			"id": "42d5fa59-fbf6-46ea-af12-0f82b98c9bed",
+			"name": "Tentar gerar token de autenticação sem password",
+			"url": "https://restful-booker.herokuapp.com/auth",
+			"time": 158,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code é 400": false,
+				"Response contém 'Bad credentials'": true
+			},
+			"testPassFailCounts": {
+				"Status code é 400": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Response contém 'Bad credentials'": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				158
+			],
+			"allTests": [
+				{
+					"Status code é 400": false,
+					"Response contém 'Bad credentials'": true
+				}
+			]
+		},
+		{
+			"id": "762c60ef-4c07-4549-aac8-68811140ff47",
+			"name": "Tentar gerar token com credenciais inválidas",
+			"url": "https://restful-booker.herokuapp.com/auth",
+			"time": 159,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code é 400": false,
+				"Response contém 'Bad credencials'": true
+			},
+			"testPassFailCounts": {
+				"Status code é 400": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Response contém 'Bad credencials'": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				159
+			],
+			"allTests": [
+				{
+					"Status code é 400": false,
+					"Response contém 'Bad credencials'": true
+				}
+			]
+		},
+		{
+			"id": "510e5185-4aff-402b-ae3b-abef8c20438e",
+			"name": "Criar uma nova reserva",
+			"url": "https://restful-booker.herokuapp.com/booking",
+			"time": 174,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code é 201": false,
+				"Response tem id da reserva": true,
+				"Response contém os detalhes da reserva": true
+			},
+			"testPassFailCounts": {
+				"Status code é 201": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Response tem id da reserva": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response contém os detalhes da reserva": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				174
+			],
+			"allTests": [
+				{
+					"Status code é 201": false,
+					"Response tem id da reserva": true,
+					"Response contém os detalhes da reserva": true
+				}
+			]
+		},
+		{
+			"id": "2edb7b3b-14da-4d25-9751-6084f397f097",
+			"name": "Criar reserva com firstname de tipo errado",
+			"url": "https://restful-booker.herokuapp.com/booking",
+			"time": 155,
+			"responseCode": {
+				"code": 500,
+				"name": "Internal Server Error"
+			},
+			"tests": {
+				"Status code é 400": false,
+				"Response contém 'Firstname expected string, got number'": false
+			},
+			"testPassFailCounts": {
+				"Status code é 400": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Response contém 'Firstname expected string, got number'": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				155
+			],
+			"allTests": [
+				{
+					"Status code é 400": false,
+					"Response contém 'Firstname expected string, got number'": false
+				}
+			]
+		},
+		{
+			"id": "4a13896d-4b44-4e67-a8d5-c2165a88a2ae",
+			"name": "Criar reserva com lastname de tipo errado",
+			"url": "https://restful-booker.herokuapp.com/booking",
+			"time": 160,
+			"responseCode": {
+				"code": 500,
+				"name": "Internal Server Error"
+			},
+			"tests": {
+				"Status code é 400": false,
+				"Response contém 'Lastname expected string, got number'": false
+			},
+			"testPassFailCounts": {
+				"Status code é 400": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Response contém 'Lastname expected string, got number'": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				160
+			],
+			"allTests": [
+				{
+					"Status code é 400": false,
+					"Response contém 'Lastname expected string, got number'": false
+				}
+			]
+		},
+		{
+			"id": "e3bc43a6-1450-4270-a6ef-3a7f54458f5f",
+			"name": "Criar reserva com totalprice de tipo errado",
+			"url": "https://restful-booker.herokuapp.com/booking",
+			"time": 162,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code é 400": false,
+				"Response contém 'Totalprice expected number, got string'": false
+			},
+			"testPassFailCounts": {
+				"Status code é 400": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Response contém 'Totalprice expected number, got string'": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				162
+			],
+			"allTests": [
+				{
+					"Status code é 400": false,
+					"Response contém 'Totalprice expected number, got string'": false
+				}
+			]
+		},
+		{
+			"id": "f2151178-765e-4e0d-a07e-f7e1c4594fd6",
+			"name": "Criar reserva com depositpaid de tipo errado",
+			"url": "https://restful-booker.herokuapp.com/booking",
+			"time": 162,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code é 400": false,
+				"Response contém 'Depositpaid expected boolean, got string'": false
+			},
+			"testPassFailCounts": {
+				"Status code é 400": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Response contém 'Depositpaid expected boolean, got string'": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				162
+			],
+			"allTests": [
+				{
+					"Status code é 400": false,
+					"Response contém 'Depositpaid expected boolean, got string'": false
+				}
+			]
+		},
+		{
+			"id": "0dc1874a-0049-47bb-b4d6-c65f95e215d3",
+			"name": "Criar reserva com additionalneeds de tipo errado",
+			"url": "https://restful-booker.herokuapp.com/booking",
+			"time": 160,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code é 400": false,
+				"Response contém 'Additionalneeds expected string, got number'": false
+			},
+			"testPassFailCounts": {
+				"Status code é 400": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Response contém 'Additionalneeds expected string, got number'": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				160
+			],
+			"allTests": [
+				{
+					"Status code é 400": false,
+					"Response contém 'Additionalneeds expected string, got number'": false
+				}
+			]
+		},
+		{
+			"id": "77bfe11f-1b08-4c6a-93f4-13229774b527",
+			"name": "Criar reserva com checkin de tipo errado",
+			"url": "https://restful-booker.herokuapp.com/booking",
+			"time": 160,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code é 400": false,
+				"Response contém 'Checkin expected date, got number'": false
+			},
+			"testPassFailCounts": {
+				"Status code é 400": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Response contém 'Checkin expected date, got number'": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				160
+			],
+			"allTests": [
+				{
+					"Status code é 400": false,
+					"Response contém 'Checkin expected date, got number'": false
+				}
+			]
+		},
+		{
+			"id": "5b869b52-8dca-419d-8547-8a7b7f1ab9dc",
+			"name": "Criar reserva com checkout de tipo errado",
+			"url": "https://restful-booker.herokuapp.com/booking",
+			"time": 157,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code é 400": false,
+				"Response contém 'Checkout expected date, got string'": false
+			},
+			"testPassFailCounts": {
+				"Status code é 400": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Response contém 'Checkout expected date, got string'": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				157
+			],
+			"allTests": [
+				{
+					"Status code é 400": false,
+					"Response contém 'Checkout expected date, got string'": false
+				}
+			]
+		},
+		{
+			"id": "2482a0fc-e3bc-4cb1-a3dd-12ff5a69704e",
+			"name": "Criar reserva com checkout com formato de data diferente",
+			"url": "https://restful-booker.herokuapp.com/booking",
+			"time": 156,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code é 200": true,
+				"Response contém data convertida": true
+			},
+			"testPassFailCounts": {
+				"Status code é 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response contém data convertida": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				156
+			],
+			"allTests": [
+				{
+					"Status code é 200": true,
+					"Response contém data convertida": true
+				}
+			]
+		},
+		{
+			"id": "be06570e-5d6e-48e2-8f38-82e85da40780",
+			"name": "Criar reserva com checkin com formato de data diferente",
+			"url": "https://restful-booker.herokuapp.com/booking",
+			"time": 155,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code é 400": false,
+				"Invalid checkin date format": false
+			},
+			"testPassFailCounts": {
+				"Status code é 400": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Invalid checkin date format": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				155
+			],
+			"allTests": [
+				{
+					"Status code é 400": false,
+					"Invalid checkin date format": false
+				}
+			]
+		},
+		{
+			"id": "7f572c84-ed61-49ad-9bf6-01162528d63d",
+			"name": "Criar reserva com checkin maior que o checkout",
+			"url": "https://restful-booker.herokuapp.com/booking",
+			"time": 160,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code é 400": false,
+				"O checkout acontece antes do checkin": false
+			},
+			"testPassFailCounts": {
+				"Status code é 400": {
+					"pass": 0,
+					"fail": 1
+				},
+				"O checkout acontece antes do checkin": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				160
+			],
+			"allTests": [
+				{
+					"Status code é 400": false,
+					"O checkout acontece antes do checkin": false
+				}
+			]
+		},
+		{
+			"id": "1f2f9e49-9ad8-4466-8127-bd9937b4adfc",
+			"name": "Criar reserva sem totalprice",
+			"url": "https://restful-booker.herokuapp.com/booking",
+			"time": 170,
+			"responseCode": {
+				"code": 500,
+				"name": "Internal Server Error"
+			},
+			"tests": {
+				"Status code é 400": false,
+				"Response contém 'totalprice is required'": false
+			},
+			"testPassFailCounts": {
+				"Status code é 400": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Response contém 'totalprice is required'": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				170
+			],
+			"allTests": [
+				{
+					"Status code é 400": false,
+					"Response contém 'totalprice is required'": false
+				}
+			]
+		},
+		{
+			"id": "3e26ee15-45d7-48bf-b01a-a606b16a7c2d",
+			"name": "Criar reserva sem additionalneeds",
+			"url": "https://restful-booker.herokuapp.com/booking",
+			"time": 154,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code é 400": false,
+				"Response contém 'additionalneeds is required'": false
+			},
+			"testPassFailCounts": {
+				"Status code é 400": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Response contém 'additionalneeds is required'": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				154
+			],
+			"allTests": [
+				{
+					"Status code é 400": false,
+					"Response contém 'additionalneeds is required'": false
+				}
+			]
+		},
+		{
+			"id": "a92bcbeb-59b2-4600-aa19-b84fef66ecf8",
+			"name": "Criar reserva sem checkin",
+			"url": "https://restful-booker.herokuapp.com/booking",
+			"time": 185,
+			"responseCode": {
+				"code": 500,
+				"name": "Internal Server Error"
+			},
+			"tests": {
+				"Status code é 400": false,
+				"Response contém 'checkin is required'": false
+			},
+			"testPassFailCounts": {
+				"Status code é 400": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Response contém 'checkin is required'": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				185
+			],
+			"allTests": [
+				{
+					"Status code é 400": false,
+					"Response contém 'checkin is required'": false
+				}
+			]
+		},
+		{
+			"id": "21b451f3-0eca-4d83-8f83-180a07d2fed3",
+			"name": "Criar reserva sem depositpaid",
+			"url": "https://restful-booker.herokuapp.com/booking",
+			"time": 156,
+			"responseCode": {
+				"code": 500,
+				"name": "Internal Server Error"
+			},
+			"tests": {
+				"Status code é 400": false,
+				"Response contém 'depositpaid is required'": false
+			},
+			"testPassFailCounts": {
+				"Status code é 400": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Response contém 'depositpaid is required'": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				156
+			],
+			"allTests": [
+				{
+					"Status code é 400": false,
+					"Response contém 'depositpaid is required'": false
+				}
+			]
+		},
+		{
+			"id": "98974e06-2575-40bf-99e1-3e50525b318f",
+			"name": "Criar reserva sem checkout",
+			"url": "https://restful-booker.herokuapp.com/booking",
+			"time": 163,
+			"responseCode": {
+				"code": 500,
+				"name": "Internal Server Error"
+			},
+			"tests": {
+				"Status code é 400": false,
+				"Response contém 'checkout is required'": false
+			},
+			"testPassFailCounts": {
+				"Status code é 400": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Response contém 'checkout is required'": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				163
+			],
+			"allTests": [
+				{
+					"Status code é 400": false,
+					"Response contém 'checkout is required'": false
+				}
+			]
+		},
+		{
+			"id": "7de8e225-b993-4a33-8c65-763904ed0fd6",
+			"name": "Criar reserva sem lastname",
+			"url": "https://restful-booker.herokuapp.com/booking",
+			"time": 157,
+			"responseCode": {
+				"code": 500,
+				"name": "Internal Server Error"
+			},
+			"tests": {
+				"Status code é 400": false,
+				"Response contém 'lastname is required'": false
+			},
+			"testPassFailCounts": {
+				"Status code é 400": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Response contém 'lastname is required'": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				157
+			],
+			"allTests": [
+				{
+					"Status code é 400": false,
+					"Response contém 'lastname is required'": false
+				}
+			]
+		},
+		{
+			"id": "55812436-8989-4954-97d2-4a761452f6fb",
+			"name": "Criar reserva sem firstname",
+			"url": "https://restful-booker.herokuapp.com/booking",
+			"time": 158,
+			"responseCode": {
+				"code": 500,
+				"name": "Internal Server Error"
+			},
+			"tests": {
+				"Status code é 400": false,
+				"Response contém 'firstname is required'": false
+			},
+			"testPassFailCounts": {
+				"Status code é 400": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Response contém 'firstname is required'": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				158
+			],
+			"allTests": [
+				{
+					"Status code é 400": false,
+					"Response contém 'firstname is required'": false
+				}
+			]
+		},
+		{
+			"id": "3737a11d-e1b1-4d16-8f0c-ab9c4b8da9e0",
+			"name": "Listar todas as reservas",
+			"url": "https://restful-booker.herokuapp.com/booking",
+			"time": 173,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response é um array": true,
+				"Todos os registros da response contêm bookingid": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response é um array": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Todos os registros da response contêm bookingid": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				173
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response é um array": true,
+					"Todos os registros da response contêm bookingid": true
+				}
+			]
+		},
+		{
+			"id": "4e708d30-cd38-4296-b860-733b3958c16d",
+			"name": "Buscar reservas por first e last name",
+			"url": "https://restful-booker.herokuapp.com/booking?firstname=Jotaro&lastname=Kujo",
+			"time": 162,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response é um array": true,
+				"Todos os registros da response contêm bookingid": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response é um array": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Todos os registros da response contêm bookingid": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				162
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response é um array": true,
+					"Todos os registros da response contêm bookingid": true
+				}
+			]
+		},
+		{
+			"id": "6e24c19a-edc0-4830-a34f-a02e8f6f35a3",
+			"name": "Buscar reservas com names de valores inválidos",
+			"url": "https://restful-booker.herokuapp.com/booking?firstname=1234&lastname=1234",
+			"time": 161,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 400": false,
+				"Response contém as mensagens de erro para os dois parâmetros": false
+			},
+			"testPassFailCounts": {
+				"Status code is 400": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Response contém as mensagens de erro para os dois parâmetros": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				161
+			],
+			"allTests": [
+				{
+					"Status code is 400": false,
+					"Response contém as mensagens de erro para os dois parâmetros": false
+				}
+			]
+		},
+		{
+			"id": "9ac35a66-00a7-474c-8dab-bd1fe6da2def",
+			"name": "Buscar reservas com parâmetro inválido",
+			"url": "https://restful-booker.herokuapp.com/booking?teste=1234",
+			"time": 158,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				158
+			],
+			"allTests": [
+				{
+					"Status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "c3e52685-4b6b-4508-a896-c81fa5566835",
+			"name": "Buscar reservas por last name",
+			"url": "https://restful-booker.herokuapp.com/booking?lastname=Jorge",
+			"time": 160,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response é um array": true,
+				"Todos os registros da response contêm bookingid": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response é um array": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Todos os registros da response contêm bookingid": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				160
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response é um array": true,
+					"Todos os registros da response contêm bookingid": true
+				}
+			]
+		},
+		{
+			"id": "02e9fd5e-f25e-4b8a-ad21-8f7f8a4100b9",
+			"name": "Buscar reservas por first name",
+			"url": "https://restful-booker.herokuapp.com/booking?firstname=Jotaro",
+			"time": 217,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response é um array": true,
+				"Todos os registros da response contêm bookingid": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response é um array": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Todos os registros da response contêm bookingid": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				217
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response é um array": true,
+					"Todos os registros da response contêm bookingid": true
+				}
+			]
+		},
+		{
+			"id": "db43e748-e2f0-4cbe-bfbd-a64fd97eb738",
+			"name": "Buscar reservas por data de check-in/check-out",
+			"url": "https://restful-booker.herokuapp.com/booking?checkin=2014-03-13&checkout=2014-05-21\r",
+			"time": 164,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response é um array": true,
+				"Todos os registros da response contêm bookingid": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response é um array": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Todos os registros da response contêm bookingid": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				164
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response é um array": true,
+					"Todos os registros da response contêm bookingid": true
+				}
+			]
+		},
+		{
+			"id": "63ce5b1f-cfd7-4361-b872-312873dabb40",
+			"name": "Buscar reservas por datas inválidas",
+			"url": "https://restful-booker.herokuapp.com/booking?checkin=1234&checkout=teste",
+			"time": 172,
+			"responseCode": {
+				"code": 500,
+				"name": "Internal Server Error"
+			},
+			"tests": {
+				"Status code is 400": false,
+				"Response contem mensagens de erro para os dois parâmetros": false
+			},
+			"testPassFailCounts": {
+				"Status code is 400": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Response contem mensagens de erro para os dois parâmetros": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				172
+			],
+			"allTests": [
+				{
+					"Status code is 400": false,
+					"Response contem mensagens de erro para os dois parâmetros": false
+				}
+			]
+		},
+		{
+			"id": "2a4e03f5-d6f5-42e8-9cd4-1b19ab918c66",
+			"name": "Buscar reservas por data de check-out",
+			"url": "https://restful-booker.herokuapp.com/booking?checkout=2014-05-21\r",
+			"time": 163,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response é um array": true,
+				"Todos os registros da response contêm bookingid": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response é um array": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Todos os registros da response contêm bookingid": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				163
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response é um array": true,
+					"Todos os registros da response contêm bookingid": true
+				}
+			]
+		},
+		{
+			"id": "b46dadad-ef5c-494d-a949-67c5cb811714",
+			"name": "Buscar reservas por data de check-in",
+			"url": "https://restful-booker.herokuapp.com/booking?checkin=2014-03-13",
+			"time": 158,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response é um array": true,
+				"Todos os registros da response contêm bookingid": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response é um array": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Todos os registros da response contêm bookingid": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				158
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response é um array": true,
+					"Todos os registros da response contêm bookingid": true
+				}
+			]
+		},
+		{
+			"id": "3a875407-8779-4bf0-89b8-35c6c6c50d6e",
+			"name": "Buscar uma reserva específica",
+			"url": "https://restful-booker.herokuapp.com/booking/1",
+			"time": 155,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response contém todos os campos esperados": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response contém todos os campos esperados": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				155
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response contém todos os campos esperados": true
+				}
+			]
+		},
+		{
+			"id": "317b8760-9d54-4b38-a0f9-08001f84face",
+			"name": "Buscar uma reserva com id inexistente",
+			"url": "https://restful-booker.herokuapp.com/booking/0",
+			"time": 150,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {
+				"Status code is 404": true,
+				"Response contém uma mensagem apropriada de erro": true
+			},
+			"testPassFailCounts": {
+				"Status code is 404": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response contém uma mensagem apropriada de erro": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				150
+			],
+			"allTests": [
+				{
+					"Status code is 404": true,
+					"Response contém uma mensagem apropriada de erro": true
+				}
+			]
+		},
+		{
+			"id": "ae13169c-a570-4136-94e3-60939dee967a",
+			"name": "Buscar uma reserva com id inválido",
+			"url": "https://restful-booker.herokuapp.com/booking/teste",
+			"time": 157,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {
+				"Status code is 404": true,
+				"Response contém uma mensagem apropriada de erro": true
+			},
+			"testPassFailCounts": {
+				"Status code is 404": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response contém uma mensagem apropriada de erro": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				157
+			],
+			"allTests": [
+				{
+					"Status code is 404": true,
+					"Response contém uma mensagem apropriada de erro": true
+				}
+			]
+		},
+		{
+			"id": "d80e252f-6114-4a25-92bb-54b34bbe4d9e",
+			"name": "Atualizar reserva existente",
+			"url": "https://restful-booker.herokuapp.com/booking/29",
+			"time": 160,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code é 200": true,
+				"Response contém os dados atualizados": true
+			},
+			"testPassFailCounts": {
+				"Status code é 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response contém os dados atualizados": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				160
+			],
+			"allTests": [
+				{
+					"Status code é 200": true,
+					"Response contém os dados atualizados": true
+				}
+			]
+		},
+		{
+			"id": "03eba1f8-0f78-4454-8f33-156f7ef0ddd3",
+			"name": "Atualizar reserva sem firstname",
+			"url": "https://restful-booker.herokuapp.com/booking/29",
+			"time": 156,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"Status code é 400": true,
+				"Response contém mensagem de erro adequada": false
+			},
+			"testPassFailCounts": {
+				"Status code é 400": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response contém mensagem de erro adequada": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				156
+			],
+			"allTests": [
+				{
+					"Status code é 400": true,
+					"Response contém mensagem de erro adequada": false
+				}
+			]
+		},
+		{
+			"id": "5a8751b6-8dda-4823-9b30-22911940a5d2",
+			"name": "Atualizar reserva sem lastname",
+			"url": "https://restful-booker.herokuapp.com/booking/29",
+			"time": 157,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"Status code é 400": true,
+				"Response contém mensagem de erro adequada": false
+			},
+			"testPassFailCounts": {
+				"Status code é 400": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response contém mensagem de erro adequada": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				157
+			],
+			"allTests": [
+				{
+					"Status code é 400": true,
+					"Response contém mensagem de erro adequada": false
+				}
+			]
+		},
+		{
+			"id": "8908085f-2c31-414d-8d9f-922453e4a489",
+			"name": "Atualizar reserva com depositpaid de tipo errado",
+			"url": "https://restful-booker.herokuapp.com/booking/29",
+			"time": 165,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code é 400": false,
+				"Response contém mensagem de erro adequada": false
+			},
+			"testPassFailCounts": {
+				"Status code é 400": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Response contém mensagem de erro adequada": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				165
+			],
+			"allTests": [
+				{
+					"Status code é 400": false,
+					"Response contém mensagem de erro adequada": false
+				}
+			]
+		},
+		{
+			"id": "ef1dd2ac-fd80-471b-9585-640ae88c35b6",
+			"name": "Atualizar reserva com additionalneeds tipo errado",
+			"url": "https://restful-booker.herokuapp.com/booking/29",
+			"time": 154,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code é 400": false,
+				"Response contém mensagem de erro adequada": false
+			},
+			"testPassFailCounts": {
+				"Status code é 400": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Response contém mensagem de erro adequada": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				154
+			],
+			"allTests": [
+				{
+					"Status code é 400": false,
+					"Response contém mensagem de erro adequada": false
+				}
+			]
+		},
+		{
+			"id": "106ef3a0-2a02-4aed-86e1-bd7e9abaeb1d",
+			"name": "Atualizar reserva com checkin depois do checkout",
+			"url": "https://restful-booker.herokuapp.com/booking/29",
+			"time": 158,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code é 400": false,
+				"Response contém mensagem de erro adequada": false
+			},
+			"testPassFailCounts": {
+				"Status code é 400": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Response contém mensagem de erro adequada": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				158
+			],
+			"allTests": [
+				{
+					"Status code é 400": false,
+					"Response contém mensagem de erro adequada": false
+				}
+			]
+		},
+		{
+			"id": "894caa02-a662-4b9b-9526-03dce9752f75",
+			"name": "Deletar uma reserva",
+			"url": "https://restful-booker.herokuapp.com/booking/1",
+			"time": 156,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"Status code é 200": false,
+				"Response contém mensagem de sucesso": false
+			},
+			"testPassFailCounts": {
+				"Status code é 200": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Response contém mensagem de sucesso": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				156
+			],
+			"allTests": [
+				{
+					"Status code é 200": false,
+					"Response contém mensagem de sucesso": false
+				}
+			]
+		},
+		{
+			"id": "e64911cc-1766-4329-a822-05a9d692077c",
+			"name": "Deletar uma reserva com valor inválido",
+			"url": "https://restful-booker.herokuapp.com/booking/abc",
+			"time": 158,
+			"responseCode": {
+				"code": 405,
+				"name": "Method Not Allowed"
+			},
+			"tests": {
+				"Status code is 400": false,
+				"Response contém mensagem de erro para ID Inválido": false
+			},
+			"testPassFailCounts": {
+				"Status code is 400": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Response contém mensagem de erro para ID Inválido": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				158
+			],
+			"allTests": [
+				{
+					"Status code is 400": false,
+					"Response contém mensagem de erro para ID Inválido": false
+				}
+			]
+		},
+		{
+			"id": "9a86df04-706a-4e12-a3e5-f8e8c2cc6b69",
+			"name": "Deletar uma reserva com valor inexistente",
+			"url": "https://restful-booker.herokuapp.com/booking/abc",
+			"time": 157,
+			"responseCode": {
+				"code": 405,
+				"name": "Method Not Allowed"
+			},
+			"tests": {
+				"Status code is 404": false,
+				"Response contém mensagem de erro para ID não encontrado": false
+			},
+			"testPassFailCounts": {
+				"Status code is 404": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Response contém mensagem de erro para ID não encontrado": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				157
+			],
+			"allTests": [
+				{
+					"Status code is 404": false,
+					"Response contém mensagem de erro para ID não encontrado": false
+				}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 7303,
+	"collection": {
+		"requests": [
+			{
+				"id": "06d8dc38-4adc-4d77-ae39-93a8ce05c879",
+				"method": "POST"
+			},
+			{
+				"id": "f900ce6c-a0a2-464b-971d-221c9bcb6571",
+				"method": "POST"
+			},
+			{
+				"id": "9eeaa42c-3d6c-42d2-ae97-bb05c9f64a6c",
+				"method": "POST"
+			},
+			{
+				"id": "42d5fa59-fbf6-46ea-af12-0f82b98c9bed",
+				"method": "POST"
+			},
+			{
+				"id": "762c60ef-4c07-4549-aac8-68811140ff47",
+				"method": "POST"
+			},
+			{
+				"id": "510e5185-4aff-402b-ae3b-abef8c20438e",
+				"method": "POST"
+			},
+			{
+				"id": "2edb7b3b-14da-4d25-9751-6084f397f097",
+				"method": "POST"
+			},
+			{
+				"id": "4a13896d-4b44-4e67-a8d5-c2165a88a2ae",
+				"method": "POST"
+			},
+			{
+				"id": "e3bc43a6-1450-4270-a6ef-3a7f54458f5f",
+				"method": "POST"
+			},
+			{
+				"id": "f2151178-765e-4e0d-a07e-f7e1c4594fd6",
+				"method": "POST"
+			},
+			{
+				"id": "0dc1874a-0049-47bb-b4d6-c65f95e215d3",
+				"method": "POST"
+			},
+			{
+				"id": "77bfe11f-1b08-4c6a-93f4-13229774b527",
+				"method": "POST"
+			},
+			{
+				"id": "5b869b52-8dca-419d-8547-8a7b7f1ab9dc",
+				"method": "POST"
+			},
+			{
+				"id": "2482a0fc-e3bc-4cb1-a3dd-12ff5a69704e",
+				"method": "POST"
+			},
+			{
+				"id": "be06570e-5d6e-48e2-8f38-82e85da40780",
+				"method": "POST"
+			},
+			{
+				"id": "7f572c84-ed61-49ad-9bf6-01162528d63d",
+				"method": "POST"
+			},
+			{
+				"id": "1f2f9e49-9ad8-4466-8127-bd9937b4adfc",
+				"method": "POST"
+			},
+			{
+				"id": "3e26ee15-45d7-48bf-b01a-a606b16a7c2d",
+				"method": "POST"
+			},
+			{
+				"id": "a92bcbeb-59b2-4600-aa19-b84fef66ecf8",
+				"method": "POST"
+			},
+			{
+				"id": "21b451f3-0eca-4d83-8f83-180a07d2fed3",
+				"method": "POST"
+			},
+			{
+				"id": "98974e06-2575-40bf-99e1-3e50525b318f",
+				"method": "POST"
+			},
+			{
+				"id": "7de8e225-b993-4a33-8c65-763904ed0fd6",
+				"method": "POST"
+			},
+			{
+				"id": "55812436-8989-4954-97d2-4a761452f6fb",
+				"method": "POST"
+			},
+			{
+				"id": "3737a11d-e1b1-4d16-8f0c-ab9c4b8da9e0",
+				"method": "GET"
+			},
+			{
+				"id": "4e708d30-cd38-4296-b860-733b3958c16d",
+				"method": "GET"
+			},
+			{
+				"id": "6e24c19a-edc0-4830-a34f-a02e8f6f35a3",
+				"method": "GET"
+			},
+			{
+				"id": "9ac35a66-00a7-474c-8dab-bd1fe6da2def",
+				"method": "GET"
+			},
+			{
+				"id": "c3e52685-4b6b-4508-a896-c81fa5566835",
+				"method": "GET"
+			},
+			{
+				"id": "02e9fd5e-f25e-4b8a-ad21-8f7f8a4100b9",
+				"method": "GET"
+			},
+			{
+				"id": "db43e748-e2f0-4cbe-bfbd-a64fd97eb738",
+				"method": "GET"
+			},
+			{
+				"id": "63ce5b1f-cfd7-4361-b872-312873dabb40",
+				"method": "GET"
+			},
+			{
+				"id": "2a4e03f5-d6f5-42e8-9cd4-1b19ab918c66",
+				"method": "GET"
+			},
+			{
+				"id": "b46dadad-ef5c-494d-a949-67c5cb811714",
+				"method": "GET"
+			},
+			{
+				"id": "3a875407-8779-4bf0-89b8-35c6c6c50d6e",
+				"method": "GET"
+			},
+			{
+				"id": "317b8760-9d54-4b38-a0f9-08001f84face",
+				"method": "GET"
+			},
+			{
+				"id": "ae13169c-a570-4136-94e3-60939dee967a",
+				"method": "GET"
+			},
+			{
+				"id": "d80e252f-6114-4a25-92bb-54b34bbe4d9e",
+				"method": "PUT"
+			},
+			{
+				"id": "03eba1f8-0f78-4454-8f33-156f7ef0ddd3",
+				"method": "PUT"
+			},
+			{
+				"id": "5a8751b6-8dda-4823-9b30-22911940a5d2",
+				"method": "PUT"
+			},
+			{
+				"id": "8908085f-2c31-414d-8d9f-922453e4a489",
+				"method": "PUT"
+			},
+			{
+				"id": "ef1dd2ac-fd80-471b-9585-640ae88c35b6",
+				"method": "PUT"
+			},
+			{
+				"id": "106ef3a0-2a02-4aed-86e1-bd7e9abaeb1d",
+				"method": "PUT"
+			},
+			{
+				"id": "894caa02-a662-4b9b-9526-03dce9752f75",
+				"method": "DELETE"
+			},
+			{
+				"id": "e64911cc-1766-4329-a822-05a9d692077c",
+				"method": "DELETE"
+			},
+			{
+				"id": "9a86df04-706a-4e12-a3e5-f8e8c2cc6b69",
+				"method": "DELETE"
+			}
+		]
+	}
+}
